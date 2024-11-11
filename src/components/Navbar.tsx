@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Server } from "lucide-react";
 
 const Navbar = () => {
+  const location = useLocation();
+  
   return (
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
@@ -17,16 +19,28 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-teal-500 transition-colors">
+            <Link 
+              to="/" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/" ? "text-teal-500" : ""
+              }`}
+            >
               Home
             </Link>
-            <Link to="#" className="text-gray-600 hover:text-teal-500 transition-colors">
+            <Link 
+              to="/vps" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/vps" ? "text-teal-500" : ""
+              }`}
+            >
               VPS
             </Link>
-            <Link to="#" className="text-gray-600 hover:text-teal-500 transition-colors">
-              Hosting
-            </Link>
-            <Link to="#" className="text-gray-600 hover:text-teal-500 transition-colors">
+            <Link 
+              to="/domains" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/domains" ? "text-teal-500" : ""
+              }`}
+            >
               Domains
             </Link>
             <Link

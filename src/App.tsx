@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
+import VPS from "./pages/VPS";
+import Domains from "./pages/Domains";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/vps" element={<VPS />} />
+          <Route path="/domains" element={<Domains />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
