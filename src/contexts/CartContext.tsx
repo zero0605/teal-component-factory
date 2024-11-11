@@ -6,6 +6,7 @@ type CartItem = {
   name: string;
   price: number;
   type: 'vps' | 'domain';
+  quantity?: number;
   details?: string;
 };
 
