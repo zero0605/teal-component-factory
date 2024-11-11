@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Lock, Mail } from "lucide-react";
+import { Lock, Mail, Server, Globe, Database } from "lucide-react";
 import { toast } from "sonner";
 
 const Login = () => {
