@@ -2,11 +2,20 @@ import { motion } from "framer-motion";
 import { Server, Cpu, CircuitBoard, Network } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
+import { useCart } from "@/contexts/CartContext";
+import { v4 as uuidv4 } from 'uuid';
 
 const VPS = () => {
-  const handlePurchase = (plan: string) => {
-    toast.success(`Selected ${plan} plan! Redirecting to checkout...`);
+  const { addToCart } = useCart();
+
+  const handlePurchase = (plan: any) => {
+    addToCart({
+      id: uuidv4(),
+      name: plan.name,
+      price: Number(plan.price.replace('$', '')),
+      type: 'vps',
+      details: `${plan.specs.cpu}, ${plan.specs.ram}, ${plan.specs.storage}`
+    });
   };
 
   return (
@@ -29,7 +38,7 @@ const VPS = () => {
         {[
           {
             name: "Starter",
-            price: "$10",
+            price: "10",
             specs: {
               cpu: "2 vCPUs",
               ram: "2GB RAM",
@@ -39,7 +48,7 @@ const VPS = () => {
           },
           {
             name: "Professional",
-            price: "$20",
+            price: "20",
             specs: {
               cpu: "4 vCPUs",
               ram: "8GB RAM",
@@ -49,7 +58,7 @@ const VPS = () => {
           },
           {
             name: "Enterprise",
-            price: "$40",
+            price: "40",
             specs: {
               cpu: "8 vCPUs",
               ram: "16GB RAM",
@@ -98,9 +107,9 @@ const VPS = () => {
               <CardFooter>
                 <Button
                   className="w-full"
-                  onClick={() => handlePurchase(plan.name)}
+                  onClick={() => handlePurchase(plan)}
                 >
-                  Select Plan
+                  Add to Cart
                 </Button>
               </CardFooter>
             </Card>

@@ -4,8 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
+import { useCart } from "@/contexts/CartContext";
+import { v4 as uuidv4 } from 'uuid';
 
 const Domains = () => {
+  const { addToCart } = useCart();
+
+  const handlePurchase = (domain: any) => {
+    addToCart({
+      id: uuidv4(),
+      name: domain.tld,
+      price: Number(domain.price.replace('$', '')),
+      type: 'domain',
+      details: domain.description
+    });
+  };
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Searching for domain availability...");
@@ -86,7 +100,12 @@ const Domains = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full">Register Now</Button>
+                <Button 
+                  className="w-full"
+                  onClick={() => handlePurchase(domain)}
+                >
+                  Add to Cart
+                </Button>
               </CardFooter>
             </Card>
           </motion.div>
