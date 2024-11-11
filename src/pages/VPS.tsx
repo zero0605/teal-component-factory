@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Cpu, Memory, Network } from "lucide-react";
+import { Server, Cpu, CircuitBoard, Network } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -82,7 +82,7 @@ const VPS = () => {
                     {plan.specs.cpu}
                   </li>
                   <li className="flex items-center gap-2">
-                    <Memory className="w-5 h-5 text-teal-500" />
+                    <CircuitBoard className="w-5 h-5 text-teal-500" />
                     {plan.specs.ram}
                   </li>
                   <li className="flex items-center gap-2">
