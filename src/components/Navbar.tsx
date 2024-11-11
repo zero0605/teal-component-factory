@@ -18,7 +18,7 @@ const Navbar = () => {
             <span className="font-bold text-xl">HostPro</span>
           </Link>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link 
               to="/" 
               className={`text-gray-600 hover:text-teal-500 transition-colors ${
@@ -42,6 +42,38 @@ const Navbar = () => {
               }`}
             >
               Domains
+            </Link>
+            <Link 
+              to="/about" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/about" ? "text-teal-500" : ""
+              }`}
+            >
+              About
+            </Link>
+            <Link 
+              to="/blog" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/blog" ? "text-teal-500" : ""
+              }`}
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/reviews" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/reviews" ? "text-teal-500" : ""
+              }`}
+            >
+              Reviews
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/contact" ? "text-teal-500" : ""
+              }`}
+            >
+              Contact
             </Link>
             <Link
               to="/login"
