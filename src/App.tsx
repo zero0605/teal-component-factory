@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import VPS from "./pages/VPS";
+import BasicVPS from "./pages/BasicVPS";
+import PremiumVPS from "./pages/PremiumVPS";
 import Domains from "./pages/Domains";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
@@ -33,6 +35,8 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/vps" element={<VPS />} />
+                <Route path="/vps/basic" element={<BasicVPS />} />
+                <Route path="/vps/premium" element={<PremiumVPS />} />
                 <Route path="/domains" element={<Domains />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/blog" element={<Blog />} />
