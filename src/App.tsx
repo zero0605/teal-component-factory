@@ -8,8 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
-import BasicVPS from "./pages/BasicVPS";
-import PremiumVPS from "./pages/PremiumVPS";
+import VPS from "./pages/VPS";
 import Domains from "./pages/Domains";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
@@ -33,8 +32,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/vps/basic" element={<BasicVPS />} />
-                <Route path="/vps/premium" element={<PremiumVPS />} />
+                <Route path="/vps" element={<VPS />} />
                 <Route path="/domains" element={<Domains />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/blog" element={<Blog />} />

@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Server, ShoppingCart, LogIn, UserPlus, ChevronDown } from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { Server, ShoppingCart, LogIn, UserPlus } from "lucide-react";
 
 const Navbar = () => {
   const location = useLocation();
@@ -35,39 +27,14 @@ const Navbar = () => {
             >
               Trang Chủ
             </Link>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={`text-gray-600 hover:text-teal-500 transition-colors ${
-                    location.pathname.includes("/vps") ? "text-teal-500" : ""
-                  }`}>
-                    VPS
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[400px]">
-                      <Link 
-                        to="/vps/basic" 
-                        className="block p-3 space-y-1 hover:bg-gray-100 rounded-md"
-                      >
-                        <div className="font-medium">Basic VPS</div>
-                        <p className="text-sm text-gray-500">
-                          Affordable virtual private servers for small projects
-                        </p>
-                      </Link>
-                      <Link 
-                        to="/vps/premium" 
-                        className="block p-3 space-y-1 hover:bg-gray-100 rounded-md"
-                      >
-                        <div className="font-medium">Premium VPS</div>
-                        <p className="text-sm text-gray-500">
-                          High-performance VPS for demanding applications
-                        </p>
-                      </Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <Link 
+              to="/vps" 
+              className={`text-gray-600 hover:text-teal-500 transition-colors ${
+                location.pathname === "/vps" ? "text-teal-500" : ""
+              }`}
+            >
+              VPS
+            </Link>
             <Link 
               to="/domains" 
               className={`text-gray-600 hover:text-teal-500 transition-colors ${
