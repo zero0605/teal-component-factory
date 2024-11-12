@@ -25,7 +25,7 @@ const Navbar = () => {
                 location.pathname === "/" ? "text-teal-500" : ""
               }`}
             >
-              Home
+              Trang Chủ
             </Link>
             <Link 
               to="/vps" 
@@ -41,7 +41,7 @@ const Navbar = () => {
                 location.pathname === "/domains" ? "text-teal-500" : ""
               }`}
             >
-              Domains
+              Tên Miền
             </Link>
             <Link 
               to="/about" 
@@ -49,7 +49,7 @@ const Navbar = () => {
                 location.pathname === "/about" ? "text-teal-500" : ""
               }`}
             >
-              About
+              Về Chúng Tôi
             </Link>
             <Link 
               to="/blog" 
@@ -65,7 +65,7 @@ const Navbar = () => {
                 location.pathname === "/reviews" ? "text-teal-500" : ""
               }`}
             >
-              Reviews
+              Đánh Giá
             </Link>
             <Link 
               to="/contact" 
@@ -73,13 +73,13 @@ const Navbar = () => {
                 location.pathname === "/contact" ? "text-teal-500" : ""
               }`}
             >
-              Contact
+              Liên Hệ
             </Link>
             <Link
               to="/login"
               className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition-colors"
             >
-              Login
+              Đăng Nhập
             </Link>
           </div>
         </div>

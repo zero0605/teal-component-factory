@@ -8,36 +8,35 @@ import { v4 as uuidv4 } from 'uuid';
 import { useState } from "react";
 import { toast } from "sonner";
 
-// Extract VPS plans to a constant to keep the code DRY
 const VPS_PLANS = [
   {
-    name: "Starter",
+    name: "Cơ Bản",
     price: "10",
     specs: {
       cpu: "2 vCPUs",
       ram: "2GB RAM",
       storage: "50GB SSD",
-      bandwidth: "2TB Transfer",
+      bandwidth: "2TB Băng Thông",
     },
   },
   {
-    name: "Professional",
+    name: "Chuyên Nghiệp",
     price: "20",
     specs: {
       cpu: "4 vCPUs",
       ram: "8GB RAM",
       storage: "100GB SSD",
-      bandwidth: "4TB Transfer",
+      bandwidth: "4TB Băng Thông",
     },
   },
   {
-    name: "Enterprise",
+    name: "Doanh Nghiệp",
     price: "40",
     specs: {
       cpu: "8 vCPUs",
       ram: "16GB RAM",
       storage: "200GB SSD",
-      bandwidth: "8TB Transfer",
+      bandwidth: "8TB Băng Thông",
     },
   },
 ];
@@ -55,7 +54,7 @@ const VPSCard = ({ plan }: { plan: typeof VPS_PLANS[0] }) => {
       quantity,
       details: `${plan.specs.cpu}, ${plan.specs.ram}, ${plan.specs.storage}`
     });
-    toast.success(`Added ${quantity} ${plan.name} VPS to cart`);
+    toast.success(`Đã thêm ${quantity} ${plan.name} VPS vào giỏ hàng`);
   };
 
   return (
@@ -72,7 +71,7 @@ const VPSCard = ({ plan }: { plan: typeof VPS_PLANS[0] }) => {
             <span className="text-3xl font-bold text-teal-500">
               ${plan.price}
             </span>
-            /month
+            /tháng
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -96,7 +95,7 @@ const VPSCard = ({ plan }: { plan: typeof VPS_PLANS[0] }) => {
           </ul>
           <div className="mt-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Quantity
+              Số Lượng
             </label>
             <Input
               type="number"
@@ -114,7 +113,7 @@ const VPSCard = ({ plan }: { plan: typeof VPS_PLANS[0] }) => {
             onClick={handlePurchase}
           >
             <ShoppingCart className="w-4 h-4 mr-2" />
-            Add to Cart
+            Thêm Vào Giỏ Hàng
           </Button>
         </CardFooter>
       </Card>
@@ -131,11 +130,11 @@ const VPS = () => {
         className="text-center mb-16"
       >
         <h1 className="text-4xl font-bold mb-4 gradient-text">
-          High-Performance Virtual Private Servers
+          Máy Chủ Ảo Hiệu Năng Cao
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Deploy your applications on our reliable and scalable VPS infrastructure.
-          Choose the plan that fits your needs.
+          Triển khai ứng dụng của bạn trên cơ sở hạ tầng VPS đáng tin cậy và có khả năng mở rộng.
+          Chọn gói phù hợp với nhu cầu của bạn.
         </p>
       </motion.div>
 

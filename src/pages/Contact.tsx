@@ -5,7 +5,7 @@ import { toast } from "sonner";
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent successfully! We'll get back to you soon.");
+    toast.success("Tin nhắn đã được gửi thành công! Chúng tôi sẽ liên hệ lại với bạn sớm.");
   };
 
   return (
@@ -17,27 +17,27 @@ const Contact = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold mb-8 text-center">
-            Contact <span className="gradient-text">Us</span>
+            Liên Hệ <span className="gradient-text">Chúng Tôi</span>
           </h1>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg card-shadow">
                 <Mail className="w-10 h-10 text-teal-500 mb-4" />
-                <h2 className="text-xl font-semibold mb-2">Email Us</h2>
+                <h2 className="text-xl font-semibold mb-2">Email</h2>
                 <p className="text-gray-600">support@hostpro.com</p>
               </div>
 
               <div className="bg-white p-6 rounded-lg card-shadow">
                 <Phone className="w-10 h-10 text-teal-500 mb-4" />
-                <h2 className="text-xl font-semibold mb-2">Call Us</h2>
+                <h2 className="text-xl font-semibold mb-2">Điện Thoại</h2>
                 <p className="text-gray-600">+1 (555) 123-4567</p>
               </div>
 
               <div className="bg-white p-6 rounded-lg card-shadow">
                 <MessageSquare className="w-10 h-10 text-teal-500 mb-4" />
-                <h2 className="text-xl font-semibold mb-2">Live Chat</h2>
-                <p className="text-gray-600">Available 24/7</p>
+                <h2 className="text-xl font-semibold mb-2">Chat Trực Tuyến</h2>
+                <p className="text-gray-600">Hỗ trợ 24/7</p>
               </div>
             </div>
 
@@ -47,7 +47,7 @@ const Contact = () => {
             >
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
+                  Họ Tên
                 </label>
                 <input
                   type="text"
@@ -69,7 +69,7 @@ const Contact = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
+                  Tin Nhắn
                 </label>
                 <textarea
                   required
@@ -82,7 +82,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition-colors"
               >
-                Send Message
+                Gửi Tin Nhắn
               </button>
             </motion.form>
           </div>

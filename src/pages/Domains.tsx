@@ -22,7 +22,7 @@ const Domains = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Searching for domain availability...");
+    toast.success("Đang tìm kiếm tên miền...");
   };
 
   return (
@@ -33,11 +33,11 @@ const Domains = () => {
         className="text-center mb-16"
       >
         <h1 className="text-4xl font-bold mb-4 gradient-text">
-          Find Your Perfect Domain Name
+          Tìm Tên Miền Hoàn Hảo Của Bạn
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Search and register domain names for your website. We offer competitive
-          prices and free DNS management.
+          Tìm kiếm và đăng ký tên miền cho trang web của bạn. Chúng tôi cung cấp giá cả 
+          cạnh tranh và quản lý DNS miễn phí.
         </p>
       </motion.div>
 
@@ -46,13 +46,13 @@ const Domains = () => {
           <div className="flex-1">
             <Input
               type="text"
-              placeholder="Enter your domain name..."
+              placeholder="Nhập tên miền của bạn..."
               className="w-full"
             />
           </div>
           <Button type="submit">
             <Search className="w-4 h-4 mr-2" />
-            Search
+            Tìm Kiếm
           </Button>
         </form>
       </div>
@@ -62,17 +62,17 @@ const Domains = () => {
           {
             tld: ".com",
             price: "$12",
-            description: "Perfect for commercial websites",
+            description: "Hoàn hảo cho các trang web thương mại",
           },
           {
             tld: ".net",
             price: "$10",
-            description: "Ideal for network services",
+            description: "Lý tưởng cho dịch vụ mạng",
           },
           {
             tld: ".org",
             price: "$9",
-            description: "Great for organizations",
+            description: "Tuyệt vời cho tổ chức",
           },
         ].map((domain) => (
           <motion.div
@@ -96,7 +96,7 @@ const Domains = () => {
                   <span className="text-3xl font-bold text-teal-500">
                     {domain.price}
                   </span>
-                  <span className="text-gray-600">/year</span>
+                  <span className="text-gray-600">/năm</span>
                 </div>
               </CardContent>
               <CardFooter>
@@ -104,7 +104,7 @@ const Domains = () => {
                   className="w-full"
                   onClick={() => handlePurchase(domain)}
                 >
-                  Add to Cart
+                  Thêm Vào Giỏ Hàng
                 </Button>
               </CardFooter>
             </Card>

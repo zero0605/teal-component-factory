@@ -14,7 +14,7 @@ const Payment = () => {
   const form = useForm();
 
   const onSubmit = (data: any) => {
-    toast.success("Payment successful!");
+    toast.success("Thanh toán thành công!");
     clearCart();
     navigate("/");
   };
@@ -28,12 +28,12 @@ const Payment = () => {
       >
         <div className="flex items-center gap-2 mb-8">
           <CreditCard className="w-8 h-8 text-teal-500" />
-          <h1 className="text-3xl font-bold">Payment</h1>
+          <h1 className="text-3xl font-bold">Thanh Toán</h1>
         </div>
 
         <div className="bg-white rounded-lg shadow p-6">
           <div className="mb-6">
-            <p className="text-gray-600">Total Amount</p>
+            <p className="text-gray-600">Tổng Số Tiền</p>
             <p className="text-3xl font-bold">${total}</p>
           </div>
 
@@ -44,7 +44,7 @@ const Payment = () => {
                 name="cardNumber"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Card Number</FormLabel>
+                    <FormLabel>Số Thẻ</FormLabel>
                     <FormControl>
                       <Input placeholder="1234 5678 9012 3456" {...field} />
                     </FormControl>
@@ -59,7 +59,7 @@ const Payment = () => {
                   name="expiry"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Expiry Date</FormLabel>
+                      <FormLabel>Ngày Hết Hạn</FormLabel>
                       <FormControl>
                         <Input placeholder="MM/YY" {...field} />
                       </FormControl>
@@ -86,9 +86,9 @@ const Payment = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center text-sm text-gray-600">
                   <Lock className="w-4 h-4 mr-1" />
-                  Secure Payment
+                  Thanh Toán An Toàn
                 </div>
-                <Button type="submit">Pay Now</Button>
+                <Button type="submit">Thanh Toán Ngay</Button>
               </div>
             </form>
           </Form>

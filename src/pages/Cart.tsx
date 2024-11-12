@@ -17,13 +17,13 @@ const Cart = () => {
       >
         <div className="flex items-center gap-2 mb-8">
           <ShoppingCart className="w-8 h-8 text-teal-500" />
-          <h1 className="text-3xl font-bold">Shopping Cart</h1>
+          <h1 className="text-3xl font-bold">Giỏ Hàng</h1>
         </div>
 
         {items.length === 0 ? (
           <div className="text-center py-8">
-            <p className="text-gray-600 mb-4">Your cart is empty</p>
-            <Button onClick={() => navigate("/vps")}>Browse VPS Plans</Button>
+            <p className="text-gray-600 mb-4">Giỏ hàng của bạn đang trống</p>
+            <Button onClick={() => navigate("/vps")}>Xem Các Gói VPS</Button>
           </div>
         ) : (
           <>
@@ -58,11 +58,11 @@ const Cart = () => {
 
             <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
               <div>
-                <p className="text-gray-600">Total</p>
+                <p className="text-gray-600">Tổng Cộng</p>
                 <p className="text-2xl font-bold">${total}</p>
               </div>
               <Button onClick={() => navigate("/payment")}>
-                Proceed to Payment
+                Tiến Hành Thanh Toán
               </Button>
             </div>
           </>

@@ -7,18 +7,18 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-semibold text-lg mb-4">About HostPro</h3>
+            <h3 className="font-semibold text-lg mb-4">Về HostPro</h3>
             <p className="text-gray-600">
-              Premium hosting solutions for businesses of all sizes. Reliable, secure, and scalable.
+              Giải pháp hosting cao cấp cho doanh nghiệp mọi quy mô. Đáng tin cậy, an toàn và có khả năng mở rộng.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4">Liên Kết Nhanh</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-gray-600 hover:text-teal-500 transition-colors">
-                  About Us
+                  Về Chúng Tôi
                 </Link>
               </li>
               <li>
@@ -28,19 +28,19 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/reviews" className="text-gray-600 hover:text-teal-500 transition-colors">
-                  Reviews
+                  Đánh Giá
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-600 hover:text-teal-500 transition-colors">
-                  Contact
+                  Liên Hệ
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
+            <h3 className="font-semibold text-lg mb-4">Dịch Vụ</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/vps" className="text-gray-600 hover:text-teal-500 transition-colors">
@@ -49,14 +49,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/domains" className="text-gray-600 hover:text-teal-500 transition-colors">
-                  Domain Names
+                  Tên Miền
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Connect</h3>
+            <h3 className="font-semibold text-lg mb-4">Kết Nối</h3>
             <div className="flex space-x-4">
               <a
                 href="https://github.com"
@@ -88,7 +88,7 @@ const Footer = () => {
 
         <div className="border-t mt-8 pt-8 flex items-center justify-center text-gray-600">
           <Copyright className="w-4 h-4 mr-2" />
-          <p>{new Date().getFullYear()} HostPro. All rights reserved.</p>
+          <p>{new Date().getFullYear()} HostPro. Đã đăng ký bản quyền.</p>
         </div>
       </div>
     </footer>

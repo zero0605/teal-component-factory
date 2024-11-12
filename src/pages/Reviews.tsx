@@ -4,27 +4,27 @@ import { Star, ThumbsUp } from "lucide-react";
 const reviews = [
   {
     id: 1,
-    name: "John Smith",
+    name: "Nguyễn Văn A",
     company: "Tech Solutions Inc.",
     rating: 5,
-    comment: "Excellent hosting service! The VPS performance is outstanding and the support team is always helpful.",
-    date: "March 15, 2024"
+    comment: "Dịch vụ hosting tuyệt vời! Hiệu suất VPS xuất sắc và đội ngũ hỗ trợ luôn sẵn sàng giúp đỡ.",
+    date: "15 Tháng 3, 2024"
   },
   {
     id: 2,
-    name: "Sarah Johnson",
+    name: "Trần Thị B",
     company: "Digital Marketing Agency",
     rating: 5,
-    comment: "We've been using HostPro for our client websites and couldn't be happier. The uptime is remarkable.",
-    date: "March 12, 2024"
+    comment: "Chúng tôi đã sử dụng HostPro cho các trang web khách hàng và rất hài lòng. Thời gian hoạt động đáng kinh ngạc.",
+    date: "12 Tháng 3, 2024"
   },
   {
     id: 3,
-    name: "Michael Brown",
+    name: "Lê Văn C",
     company: "E-commerce Solutions",
     rating: 4,
-    comment: "Great value for money. The server performance is excellent and the control panel is user-friendly.",
-    date: "March 10, 2024"
+    comment: "Giá trị tuyệt vời cho chi phí. Hiệu suất máy chủ xuất sắc và bảng điều khiển rất dễ sử dụng.",
+    date: "10 Tháng 3, 2024"
   }
 ];
 
@@ -38,7 +38,7 @@ const Reviews = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold mb-8 text-center">
-            Customer <span className="gradient-text">Reviews</span>
+            Đánh Giá <span className="gradient-text">Khách Hàng</span>
           </h1>
 
           <div className="grid gap-8">
@@ -66,7 +66,7 @@ const Reviews = () => {
                   <span>{review.date}</span>
                   <div className="flex items-center gap-2">
                     <ThumbsUp className="w-4 h-4" />
-                    <span>Verified Customer</span>
+                    <span>Khách Hàng Đã Xác Thực</span>
                   </div>
                 </div>
               </motion.div>

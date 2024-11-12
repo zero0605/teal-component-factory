@@ -5,27 +5,27 @@ import { Link } from "react-router-dom";
 const blogPosts = [
   {
     id: 1,
-    title: "Getting Started with VPS Hosting",
-    excerpt: "Learn the basics of VPS hosting and how to choose the right plan for your needs.",
-    date: "March 15, 2024",
-    author: "John Doe",
-    category: "Tutorials"
+    title: "Bắt Đầu Với VPS Hosting",
+    excerpt: "Tìm hiểu những kiến thức cơ bản về VPS hosting và cách chọn gói phù hợp với nhu cầu của bạn.",
+    date: "15 Tháng 3, 2024",
+    author: "Nguyễn Văn A",
+    category: "Hướng Dẫn"
   },
   {
     id: 2,
-    title: "10 Tips for Domain Management",
-    excerpt: "Essential tips for managing your domain portfolio effectively.",
-    date: "March 12, 2024",
-    author: "Jane Smith",
-    category: "Domain Management"
+    title: "10 Mẹo Quản Lý Tên Miền",
+    excerpt: "Những mẹo thiết yếu để quản lý danh mục tên miền của bạn một cách hiệu quả.",
+    date: "12 Tháng 3, 2024",
+    author: "Trần Thị B",
+    category: "Quản Lý Tên Miền"
   },
   {
     id: 3,
-    title: "Security Best Practices for Your Server",
-    excerpt: "Keep your server secure with these essential security practices.",
-    date: "March 10, 2024",
-    author: "Mike Johnson",
-    category: "Security"
+    title: "Thực Hành Bảo Mật Tốt Nhất Cho Máy Chủ",
+    excerpt: "Giữ máy chủ của bạn an toàn với những thực hành bảo mật thiết yếu này.",
+    date: "10 Tháng 3, 2024",
+    author: "Lê Văn C",
+    category: "Bảo Mật"
   }
 ];
 
@@ -39,7 +39,7 @@ const Blog = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold mb-8 text-center">
-            Our <span className="gradient-text">Blog</span>
+            <span className="gradient-text">Blog</span> Của Chúng Tôi
           </h1>
 
           <div className="grid gap-8">
@@ -70,7 +70,7 @@ const Blog = () => {
                   to={`/blog/${post.id}`}
                   className="inline-flex items-center text-teal-500 hover:text-teal-600 transition-colors"
                 >
-                  <span>Read More</span>
+                  <span>Đọc Thêm</span>
                   <BookOpen className="w-4 h-4 ml-2" />
                 </Link>
               </motion.article>
