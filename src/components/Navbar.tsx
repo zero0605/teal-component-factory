@@ -5,7 +5,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -42,23 +41,25 @@ const Navbar = () => {
                   <NavigationMenuTrigger 
                     className={`${
                       location.pathname.includes("/vps") ? "text-teal-500" : ""
-                    }`}
+                    } px-4 py-2 hover:bg-gray-50 rounded-md transition-colors`}
                   >
                     VPS
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[200px]">
+                    <div className="w-[280px] p-4 shadow-lg rounded-lg bg-white border border-gray-100">
                       <Link
                         to="/vps/basic"
-                        className="block p-2 hover:bg-gray-100 rounded-md"
+                        className="block p-3 hover:bg-gray-50 rounded-md transition-colors space-y-1 group"
                       >
-                        Basic VPS
+                        <div className="font-medium text-gray-900 group-hover:text-teal-500">Basic VPS</div>
+                        <p className="text-sm text-gray-500">Affordable VPS solutions for small projects</p>
                       </Link>
                       <Link
                         to="/vps/premium"
-                        className="block p-2 hover:bg-gray-100 rounded-md"
+                        className="block p-3 mt-2 hover:bg-gray-50 rounded-md transition-colors space-y-1 group"
                       >
-                        Premium VPS
+                        <div className="font-medium text-gray-900 group-hover:text-teal-500">Premium VPS</div>
+                        <p className="text-sm text-gray-500">High-performance VPS for demanding applications</p>
                       </Link>
                     </div>
                   </NavigationMenuContent>
