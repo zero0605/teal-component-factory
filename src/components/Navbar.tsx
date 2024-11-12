@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Server, ShoppingCart } from "lucide-react";
+import { Server, ShoppingCart, LogIn, UserPlus } from "lucide-react";
 
 const Navbar = () => {
   const location = useLocation();
@@ -75,19 +75,29 @@ const Navbar = () => {
             >
               Liên Hệ
             </Link>
-            <Link
-              to="/login"
-              className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition-colors"
-            >
-              Đăng Nhập
-            </Link>
-            <Link
-              to="/cart"
-              className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-2"
-            >
-              <ShoppingCart className="w-4 h-4" />
-              Giỏ Hàng
-            </Link>
+            <div className="flex items-center space-x-2">
+              <Link
+                to="/login"
+                className="bg-teal-500 text-white px-3 py-1.5 rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-1 text-sm"
+              >
+                <LogIn className="w-4 h-4" />
+                Đăng Nhập
+              </Link>
+              <Link
+                to="/register"
+                className="bg-teal-600 text-white px-3 py-1.5 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-1 text-sm"
+              >
+                <UserPlus className="w-4 h-4" />
+                Đăng Ký
+              </Link>
+              <Link
+                to="/cart"
+                className="bg-teal-500 text-white px-3 py-1.5 rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-1 text-sm"
+              >
+                <ShoppingCart className="w-4 h-4" />
+                Giỏ Hàng
+              </Link>
+            </div>
           </div>
         </div>
       </div>
