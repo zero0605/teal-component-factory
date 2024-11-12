@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Server } from "lucide-react";
+import { Server, ShoppingCart } from "lucide-react";
 
 const Navbar = () => {
   const location = useLocation();
@@ -80,6 +80,13 @@ const Navbar = () => {
               className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition-colors"
             >
               Đăng Nhập
+            </Link>
+            <Link
+              to="/cart"
+              className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-2"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              Giỏ Hàng
             </Link>
           </div>
         </div>
