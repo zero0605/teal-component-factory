@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Cpu, Memory, HardDrive } from "lucide-react";
+import { Server, Cpu, CircleMemory, HardDrive } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
 import { v4 as uuidv4 } from 'uuid';
@@ -48,7 +48,7 @@ const BasicVPS = () => {
               1 vCPU
             </li>
             <li className="flex items-center gap-2">
-              <Memory className="w-5 h-5 text-teal-500" />
+              <CircleMemory className="w-5 h-5 text-teal-500" />
               2GB RAM
             </li>
             <li className="flex items-center gap-2">
@@ -80,7 +80,7 @@ const BasicVPS = () => {
               2 vCPU
             </li>
             <li className="flex items-center gap-2">
-              <Memory className="w-5 h-5 text-teal-500" />
+              <CircleMemory className="w-5 h-5 text-teal-500" />
               4GB RAM
             </li>
             <li className="flex items-center gap-2">
